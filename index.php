@@ -2,12 +2,11 @@
 
 require_once("config.php");
 
-$sql = new Sql();
+$root = new Usuario();
 
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+$root->loadByid(2);
 
-// json_encode converte um objeto PHP para uma string JSON
-echo json_encode($usuarios);
+echo $root;
 
 
  ?>
