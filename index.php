@@ -1,12 +1,23 @@
 <?php 
 
 require_once("config.php");
+// carrega um usuario
+//$root = new Usuario();
+//$root->loadByid(2);
 
-$root = new Usuario();
 
-$root->loadByid(2);
+// vantagem de um metodo static e que não precisa instancia apenas 
+// chamar pelo ::metodo();
 
-echo $root;
+//lista todos os usuarios do banco 
 
+
+
+
+// Quando da um echo na instância, automaticamente ela é convertida
+// string e o método mágico é executado.
+$login = new Usuario();
+$login->login("Gabriel","211236");
+echo $login;
 
  ?>
