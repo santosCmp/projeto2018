@@ -16,8 +16,17 @@ require_once("config.php");
 
 // Quando da um echo na instância, automaticamente ela é convertida
 // string e o método mágico é executado.
-$login = new Usuario();
-$login->login("Gabriel","211236");
-echo $login;
 
+
+//$login = new Usuario();
+//$login->login("Gabriel","211236");
+//echo $login;
+
+$aluno = new Usuario();
+
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@lun0");
+$aluno->insert();
+
+echo $aluno;
  ?>
