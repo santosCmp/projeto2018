@@ -22,11 +22,20 @@ require_once("config.php");
 //$login->login("Gabriel","211236");
 //echo $login;
 
-$aluno = new Usuario();
+$id = new Usuario;
 
-$aluno->setDeslogin("aluno");
-$aluno->setDessenha("@lun0");
+$id->loadByid(3);
+
+$id->update("professor","!@$#@");
+
+echo $id;
+
+/*
+$aluno = new Usuario();
+$aluno->setDeslogin("alan");
+$aluno->setDessenha("gayzin");
 $aluno->insert();
 
 echo $aluno;
+ */
  ?>

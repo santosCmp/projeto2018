@@ -59,7 +59,6 @@ class Usuario{
 	}
 
 	public static function getlist(){
-
 		$sql = new Sql();
 
 		return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;");
@@ -137,13 +136,30 @@ class Usuario{
 		if (count($results) > 0) {
 			$this->setData($results[0]);	
 
-		}
+		} 
 	}
 
 	public function __construct($login = "", $password = ""){
 
 		$this->setDeslogin($login);
 		$this->setDessenha($password);
+	}
+
+	public function update($login, $password){
+
+		$this->setDeslogin($login);
+		$this->setDessenha($password);
+
+		$sql = new Sql(); 
+
+		$sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN ,dessenha = :PASSWORD WHERE idusuario = :ID", array(
+			/* Associa valores aos parametros */
+			':LOGIN'=>$this->getDeslogin(),
+			':PASSWORD'=>$this->getDessenha(),
+			':ID'=>$this->getIdusuario()
+
+		)); 
+
 	}
 
 
