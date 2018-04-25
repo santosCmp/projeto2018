@@ -15,7 +15,7 @@ class Sql extends PDO{
 	//metodo bindParam liga o parametro com a variavel especificada
 
 	public function setParams($statement, $key, $value){
-
+ 
 		$statement->bindParam($key, $value);	
 	}
 	

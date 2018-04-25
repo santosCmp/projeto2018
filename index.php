@@ -22,13 +22,13 @@ require_once("config.php");
 //$login->login("Gabriel","211236");
 //echo $login;
 
-$id = new Usuario;
+/*$id = new Usuario;
 
 $id->loadByid(3);
 
 $id->update("professor","!@$#@");
 
-echo $id;
+echo $id;*/
 
 /*
 $aluno = new Usuario();
@@ -38,4 +38,18 @@ $aluno->insert();
 
 echo $aluno;
  */
+
+$usuario  = new Usuario();
+
+$usuario->loadByid(1);
+
+$usuario->delete();
+
+echo $usuario;
+
+
+
+
+
+
  ?>
